@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav {
+        background-color: #333;
+        padding: 10px 0;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+    
+    nav ul li a:hover {
+        background-color: #555;
+    }
+    
+    #resultsTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    #resultsTable th,
+    #resultsTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    #resultsTable th {
+        background-color: #333;
+        color: white;
+    }
+    
+    #resultsTable tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    #resultsTable tbody tr:hover {
+        background-color: #ddd;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/results">Home</a></li>
+            <li><a href="/login">User Login</a></li>
+            <li><a href="/">User Signup</a></li>
+            <li><a href="/admin">Go Back</a></li>
+        </ul>
+    </nav>
+
+    <h1>Voting Results</h1>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Voting To</th>
+                <th>Voting Location</th>
+                <th>Voting Number</th>
+                <th>Yard Number</th>
+            </tr>
+        </thead>
+        <tbody id="resultsTableBody">
+
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/results.js"></script>
+</body>
+
+</html>

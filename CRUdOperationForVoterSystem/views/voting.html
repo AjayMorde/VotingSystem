@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="/css/voting.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="contact-us">Contact</a></li>
+            <li><a href="/voting-polls">Voting Polls</a></li>
+            <!-- <li><a href="/results">Results</a></li> -->
+            <li><a href="/login">Log-Out</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1>Voting Polls</h1>
+
+        <form id="votingForm" onsubmit="submitVote(event)">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="voting_option">Voting To</label>
+                <select id="voting_option" name="voting_option" required>
+                    <option value="BJP">BJP</option>
+                    <option value="Congress">Congress</option>
+                    <option value="NOTA">NOTA</option>
+                </select>
+            </div>
+            <!-- Additional Fields for Voting Information -->
+            <div class="form-group">
+                <label for="voting_location">Voting Location</label>
+                <input type="text" id="voting_location" name="voting_location">
+            </div>
+            <div class="form-group">
+                <label for="voting_number">Voting Number</label>
+                <input type="text" id="voting_number" name="voting_number">
+            </div>
+            <div class="form-group">
+                <label for="yard_number">Yard Number</label>
+                <input type="text" id="yard_number" name="yard_number">
+            </div>
+            <!-- End of Additional Fields -->
+            <button type="submit">Vote</button>
+        </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/voting.js"></script>
+
+</html>
